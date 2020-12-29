@@ -1,0 +1,17 @@
+public class Motocicleta extends Vehiculo {
+
+	int cilindrada;
+	
+	public Motocicleta(Marca marca, String modelo, double precio, int cilindrada)
+	{
+		super(marca, modelo, precio);
+		this.cilindrada = cilindrada;
+	}
+	
+	public String Mostrar(){
+		
+		return "Marca: " + this.marca.toString() + " // " + "Modelo: " + this.modelo +
+				" // " + "Cilindrada: " + this.cilindrada + "cc // " +
+				"Precio: $" + this.precio;
+	}
+}

@@ -1,0 +1,22 @@
+import java.text.DecimalFormat;
+
+public class Motocicleta extends Vehiculo {
+
+	int cilindrada;
+	
+	public Motocicleta(Marca marca, String modelo, double precio, int cilindrada)
+	{
+		super(marca, modelo, precio);
+		this.cilindrada = cilindrada;
+	}
+	
+	@Override
+	public String Mostrar(){
+		
+		DecimalFormat formateador = new DecimalFormat("0000.00");
+		
+		return "Marca: " + this.marca.toString() + " // " + "Modelo: " + this.modelo +
+				" // " + "Cilindrada: " + this.cilindrada + "cc // " +
+				"Precio: $" + formateador.format(this.precio);
+	}
+}

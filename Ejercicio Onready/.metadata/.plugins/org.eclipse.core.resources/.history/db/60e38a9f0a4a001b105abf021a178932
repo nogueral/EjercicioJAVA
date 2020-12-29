@@ -1,0 +1,49 @@
+import java.text.DecimalFormat;
+
+public class Vehiculo {
+	
+enum Marca{
+	
+	Peugeot,
+	Honda,
+	Yamaha
+	
+}
+
+Marca marca;
+String modelo;
+double precio;
+
+public Vehiculo() {
+	
+	this.precio = 0;
+}
+
+public Vehiculo(Marca marca, String modelo, double precio) {
+	
+	this.marca=marca;
+	this.modelo=modelo;
+	this.precio=precio;
+}
+
+public double GetPrecio() {
+	
+	return this.precio;
+}
+
+public Marca GetMarca() {
+	
+	return this.marca;
+}
+
+
+public String Mostrar(){
+	
+	DecimalFormat formateador = new DecimalFormat("####.##");
+	
+	return "Marca: " + this.marca.toString() + " // " + "Modelo: " + this.modelo +
+			" // " + "Precio: $" + formateador.format(this.precio);
+}
+
+
+}

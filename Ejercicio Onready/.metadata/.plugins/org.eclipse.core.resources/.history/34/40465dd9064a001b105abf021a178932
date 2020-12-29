@@ -1,0 +1,25 @@
+
+public abstract class Vehiculo {
+	
+enum Marca{
+	
+	Peugeot,
+	Honda,
+	Yamaha
+	
+}
+
+Marca marca;
+String modelo;
+double precio;
+
+public Vehiculo(Marca marca, String modelo, double precio) {
+	
+	this.marca=marca;
+	this.modelo=modelo;
+	this.precio=precio;
+}
+
+
+
+}

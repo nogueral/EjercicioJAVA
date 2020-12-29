@@ -1,0 +1,21 @@
+public class Main {
+	
+	public static void main (String args[]) {
+		
+		Concesionaria c1 = new Concesionaria();
+		Automovil a1 = new Automovil(Vehiculo.Marca.Peugeot, "206", 200000, 4);
+		Automovil a2 = new Automovil(Vehiculo.Marca.Peugeot, "208", 250000, 5);
+		Motocicleta m1 = new Motocicleta(Vehiculo.Marca.Honda, "Titan", 60000, 125);
+		Motocicleta m2 = new Motocicleta(Vehiculo.Marca.Yamaha, "YBR", 80500.50, 160);
+		
+		c1.GetListaVehiculos().add(a1);
+		c1.GetListaVehiculos().add(m1);
+		c1.GetListaVehiculos().add(a2);
+		c1.GetListaVehiculos().add(m2);
+		
+		
+		c1.Mostrar();
+		
+	}
+
+}

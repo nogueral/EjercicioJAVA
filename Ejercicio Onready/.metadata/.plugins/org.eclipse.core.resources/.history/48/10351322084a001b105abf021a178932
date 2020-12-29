@@ -1,0 +1,25 @@
+import java.util.LinkedList;
+
+public class Concesionaria {
+
+	LinkedList<Vehiculo> listaVehiculos;
+	
+	public Concesionaria(){
+		
+		this.listaVehiculos = new LinkedList<Vehiculo>();
+	}
+	
+
+	public LinkedList<Vehiculo> GetListaVehiculos() {
+		
+		return this.listaVehiculos;
+	}
+	
+	public void Mostrar() {
+		
+		for(Vehiculo v : this.listaVehiculos) {
+			
+			System.out.println(v.Mostrar());
+		}
+	}
+}

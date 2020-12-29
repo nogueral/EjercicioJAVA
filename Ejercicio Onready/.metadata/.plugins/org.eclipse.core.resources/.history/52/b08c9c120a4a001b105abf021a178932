@@ -1,0 +1,57 @@
+import java.util.LinkedList;
+
+public class Concesionaria {
+
+	LinkedList<Vehiculo> listaVehiculos;
+	
+	public Concesionaria(){
+		
+		this.listaVehiculos = new LinkedList<Vehiculo>();
+	}
+	
+
+	public LinkedList<Vehiculo> GetListaVehiculos() {
+		
+		return this.listaVehiculos;
+	}
+	
+	public void Mostrar() {
+		
+		for(Vehiculo v : this.listaVehiculos) {
+			
+			System.out.println(v.Mostrar());
+		}
+	}
+	
+	public void VehiculoMasCaro() {
+		
+		Vehiculo auxV = new Vehiculo();
+		
+		for(Vehiculo v : this.listaVehiculos) {
+			
+			if(v.GetPrecio() > auxV.GetPrecio()) {
+				
+				auxV = v;
+			}
+		}
+		
+		System.out.println(auxV.Mostrar());
+	}
+	
+	public void VehiculoMasBarato() {
+		
+		Vehiculo auxV = new Vehiculo();
+		boolean flag = true;
+		
+		for(Vehiculo v : this.listaVehiculos) {
+			
+			if(v.GetPrecio() < auxV.GetPrecio() || flag) {
+				
+				auxV = v;
+				flag = false;
+			}
+		}
+		
+		System.out.println(auxV.Mostrar());
+	}
+}
